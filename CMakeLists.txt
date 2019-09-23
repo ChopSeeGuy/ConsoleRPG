@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10.2)
 
-configure_file(CMakeLists.txt.in googletest-download/CmakeLists.txt)
+configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
 
 execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
   RESULT_VARIABLE result
