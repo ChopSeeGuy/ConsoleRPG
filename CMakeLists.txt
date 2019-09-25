@@ -34,7 +34,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(ConsoleRPG)
 
 set(SRC_LIST
-    src/main.cpp 
+    src/main.cpp
+    src/Game.cpp 
 )
 
 include_directories(header)
@@ -50,6 +51,7 @@ endif (UNIX)
 
 set(GTEST_SRC_LIST
     tests_gtest/main_test.cpp
+    tests_gtest/GameTests.cpp
 )
 
 link_libraries(gtest)
