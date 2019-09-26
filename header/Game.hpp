@@ -1,12 +1,17 @@
 #pragma once
+#include <string>
+
 
 class Game 
 {
 public:
-    Game() = default;
+    Game();
     ~Game() = default;
+
+    void mainMenu();
+
     bool getPlaying() const;
 
 private:
-    bool playing_ = true;
+    bool playing_;
 };

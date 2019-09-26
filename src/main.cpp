@@ -1,8 +1,12 @@
 #include <iostream>
-#include <functional>
+#include "../header/Game.hpp"
 
 int main() 
 {
-    std::cout << "Hello world" << std::endl;
+    Game game;
+    while(game.getPlaying())
+    {
+        game.mainMenu();
+    }
     return 0;
 }
