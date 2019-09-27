@@ -36,6 +36,10 @@ project(ConsoleRPG)
 set(SRC_LIST
     src/main.cpp
     src/Game.cpp 
+    src/Character.cpp
+    src/ExperienceManagement.cpp
+    src/LevelManagement.cpp
+    src/HPManagement.cpp
 )
 
 include_directories(header)
@@ -52,6 +56,7 @@ endif (UNIX)
 set(GTEST_SRC_LIST
     tests_gtest/main_test.cpp
     tests_gtest/GameTests.cpp
+    tests_gtest/CharacterTests.cpp
 )
 
 link_libraries(gtest)
