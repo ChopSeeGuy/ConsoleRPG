@@ -40,6 +40,7 @@ set(SRC_LIST
     src/ExperienceManagement.cpp
     src/LevelManagement.cpp
     src/HPManagement.cpp
+    src/ManaManagement.cpp
 )
 
 include_directories(header)
@@ -57,6 +58,10 @@ set(GTEST_SRC_LIST
     tests_gtest/main_test.cpp
     tests_gtest/GameTests.cpp
     tests_gtest/CharacterTests.cpp
+    tests_gtest/ManaManagementTests.cpp
+    tests_gtest/HPManagementTests.cpp
+    tests_gtest/LevelManagementTests.cpp
+    tests_gtest/ExperienceManagementTests.cpp
 )
 
 link_libraries(gtest)

@@ -4,9 +4,5 @@
 
 int main() 
 {
-
-    ExperienceManagement exp;
-    std::cout << exp.calculateExperienceForNextLevel() << std::endl;
-
     return 0;
 }

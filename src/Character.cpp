@@ -1,59 +1,51 @@
 #include "../header/Character.hpp"
 
-
 Character::Character(std::string name,
-                     int maxHP,
-                     int currentHP,
-                     int maxMana,
-                     int currentMana,
-                     int currentExperience,
-                     int experienceForNextLevel,
-                     int level) :
-            name_(name), 
-            maxHP_(maxHP),
-            currentHP_(currentHP),
-            maxMana_(maxMana),
-            currentMana_(currentMana),
-            currentExperience_(currentExperience),
-            experienceForNextLevel_(experienceForNextLevel),
-            level_(level)
-            {};
+                     HPManagement HPManagement,
+                     ManaManagement ManaManagement,
+                     ExperienceManagement ExperienceManagement,
+                     LevelManagement LevelManagement) : 
+            name_(name),
+            HPManagement_(HPManagement),
+            ManaManagement_(ManaManagement),
+            ExperienceManagement_(ExperienceManagement),
+            LevelManagement_(LevelManagement){};
 
-const std::string& Character::getName() const
+const std::string &Character::getName() const
 {
     return name_;
 }
-const int& Character::getMaxHP() const
+const int &Character::getMaxHP() const
 {
-    return maxHP_;
+    return HPManagement_.getMaxHP();
 }
 
-const int& Character::getCurrentHP() const
+const int &Character::getCurrentHP() const
 {
-    return currentHP_;
+    return HPManagement_.getCurrentHP();
 }
 
-const int& Character::getMaxMana() const
+const int &Character::getMaxMana() const
 {
-    return maxMana_;
+    return ManaManagement_.getMaxMana();
 }
 
-const int& Character::getCurrentMana() const
+const int &Character::getCurrentMana() const
 {
-    return currentMana_;
+    return ManaManagement_.getCurrentMana();
 }
 
-const int& Character::getCurrentExperience() const
+const int &Character::getCurrentExperience() const
 {
-    return currentExperience_;
+    return ExperienceManagement_.getCurrentExperience();
 }
 
-const int& Character::getExperienceForNextLevel() const
+const int &Character::getExperienceForNextLevel() const
 {
-    return experienceForNextLevel_;
+    return ExperienceManagement_.getExperienceForNextLevel();
 }
 
-const int& Character::getLevel() const
+const int &Character::getLevel() const
 {
-    return level_;
+    return LevelManagement_.getCurrentLevel();
 }

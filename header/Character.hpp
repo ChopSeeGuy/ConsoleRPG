@@ -1,37 +1,32 @@
 #pragma once
 #include <string>
-
+#include "ExperienceManagement.hpp"
+#include "LevelManagement.hpp"
+#include "ManaManagement.hpp"
+#include "HPManagement.hpp"
 
 class Character
 {
 public:
     Character(std::string name,
-              int maxHP,
-              int currentHP,
-              int maxMana,
-              int currentMana,
-              int currentExperience,
-              int experienceForNextLevel,
-              int level);
+              HPManagement HPManagement,
+              ManaManagement ManaManagement,
+              ExperienceManagement ExperienceManagement,
+              LevelManagement LevelManagement);
 
-    const std::string& getName() const;
-    const int& getMaxHP() const;
-    const int& getCurrentHP() const;
-    const int& getMaxMana() const;
-    const int& getCurrentMana() const;
-    const int& getCurrentExperience() const;
-    const int& getExperienceForNextLevel() const;
-    const int& getLevel() const;
+    const std::string &getName() const;
+    const int &getMaxHP() const;
+    const int &getCurrentHP() const;
+    const int &getMaxMana() const;
+    const int &getCurrentMana() const;
+    const int &getCurrentExperience() const;
+    const int &getExperienceForNextLevel() const;
+    const int &getLevel() const;
 
-
-
-private: 
+private:
     std::string name_;
-    int maxHP_;
-    int currentHP_;
-    int maxMana_;
-    int currentMana_;
-    int currentExperience_;
-    int experienceForNextLevel_;
-    int level_;
+    HPManagement HPManagement_;
+    ManaManagement ManaManagement_;
+    ExperienceManagement ExperienceManagement_;
+    LevelManagement LevelManagement_;
 };
