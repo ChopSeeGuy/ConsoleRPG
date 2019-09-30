@@ -1,8 +1,7 @@
 #pragma once
-#include "LevelManagement.hpp"
 
 
-class ExperienceManagement : public LevelManagement
+class ExperienceManagement
 {
 public:
     ExperienceManagement();
@@ -10,6 +9,9 @@ public:
 
     const int& getCurrentExperience() const;
     const int& getExperienceForNextLevel() const;
+
+    void setCurrentExperience(const int& exp);
+    void setExperienceForNextLevel(const int& exp);
 
 private:
     int currentExperience_;

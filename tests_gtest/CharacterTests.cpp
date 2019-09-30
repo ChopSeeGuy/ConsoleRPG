@@ -46,7 +46,7 @@ TEST_F(CharacterTests, canGetCurrentExperience)
 
 TEST_F(CharacterTests, canGetExperienceForNextLevel)
 {
-    ASSERT_EQ(10, cut.getExperienceForNextLevel());
+    ASSERT_EQ(16, cut.getExperienceForNextLevel());
 }
 
 TEST_F(CharacterTests, canGetLevel)

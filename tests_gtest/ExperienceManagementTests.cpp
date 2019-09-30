@@ -13,5 +13,19 @@ TEST_F(ExperienceManagementTests, canGetCurrentExperience)
 
 TEST_F(ExperienceManagementTests, canGetExperienceForNextLevel)
 {
-    ASSERT_EQ(10, cut.getExperienceForNextLevel());
+    ASSERT_EQ(16, cut.getExperienceForNextLevel());
+}
+
+TEST_F(ExperienceManagementTests, canSetCurrentExperience)
+{
+    cut.setCurrentExperience(5);
+    int newExperience = cut.getCurrentExperience();
+    ASSERT_EQ(5, newExperience);
+}
+
+TEST_F(ExperienceManagementTests, canSetExperienceForNextLevel)
+{
+   cut.setExperienceForNextLevel(15);
+   int currentExperienceForNextLevel = cut.getExperienceForNextLevel();
+   ASSERT_EQ(15, currentExperienceForNextLevel);
 }
